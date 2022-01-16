@@ -21,7 +21,7 @@ public class OrderService {
     private final MemberRepository memberRepository;
     private final ItemRepository itemRepository;
     @Transactional
-    private Long order(Long memberId, Long itemId, int count){
+    public Long order(Long memberId, Long itemId, int count){
         //엔티티 조회
         Member member = memberRepository.findOne(memberId);
         Item item = itemRepository.findOne(itemId);
